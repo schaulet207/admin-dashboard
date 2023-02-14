@@ -3,7 +3,6 @@
 html {
     /* background-color: rgba(252, 250, 250); */
     font-family: 'Montserrat', sans-serif;
-    
 }
 
 :root {
@@ -24,13 +23,13 @@ html {
 }
 
 body {
-    
+
 }
 
 .container {
     display: grid;
-    grid-template-columns: 20vw 40vw 40vw;
-    grid-template-rows: 10vh 90vh;    
+    grid-template-columns: 20vw 38vw 38vw;
+    grid-template-rows: 10vh 86vh;    
     grid-gap: 20px;
 }
 
@@ -39,7 +38,6 @@ body {
     grid-row: 1 / 2;
     padding: 25px;
     border: 1px solid red;
-
 }
 
 .header-row {
@@ -49,6 +47,15 @@ body {
     align-items: center;
     border-radius: 8px;
     border: 1px solid green;
+}
+
+.header-row a{
+    text-decoration: none;
+    color: var(--txt);
+}
+
+.header-row a:hover{
+    color: blue;
 }
 
 .links {
@@ -76,12 +83,15 @@ body {
     max-width: 250px;
 }
 
-.row {
+.sidebar-content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
-    margin: 20px;
-    gap: 10px;
+    margin-left: min(15%);
+    padding-top: 1em;
+    padding-bottom: 1em;
+    gap: 20px;
 }
 
 .row2 {
@@ -124,4 +134,53 @@ body {
     width: 50px;
     border-radius: 50%;
     padding: 10px;
+}
+
+#dashboard {
+    background-image: url(img/Speed.svg);
+}
+
+#home {
+    background-image: url(img/Home.svg);
+}
+
+#profile {
+    background-image: url(img/Person.svg);
+}
+
+#messages {
+    background-image: url(img/Chat.svg);
+}
+
+#tasks {
+    background-image: url(img/Task.svg);
+}
+
+#communities {
+    background-image: url(img/Groups.svg);
+}
+
+#settings {
+    background-image: url(img/Settings.svg);
+}
+
+#support {
+    background-image: url(img/Support_agent.svg);
+}
+
+#privacy {
+    background-image: url(img/Lock.svg);
+}
+
+.sidebar-content a {
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    color: var(--txt);
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+.sidebar-content a:hover {
+    color: blue;
 }
