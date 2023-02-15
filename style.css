@@ -41,6 +41,7 @@ body {
     grid-row: 1 / 2;
     background-color: rgb(24, 23, 25);
     border-bottom: 2px solid black;
+    color: var(--txt);
 }
 
 .header-row {
@@ -53,11 +54,12 @@ body {
 
 .header-row a{
     text-decoration: none;
-    color: var(--dark-txt);
+    color: var(--txt);
+    opacity: 0.5;
 }
 
 .header-row a:hover{
-    color: lightblue;
+    opacity: 1;
 }
 
 .links {
@@ -67,6 +69,8 @@ body {
     align-items: center;
     gap: 20px;
     list-style-type: none;
+    font-family: 'Work Sans', sans-serif;
+    color: var(--txt);
 }
 
 .navigation {
@@ -191,8 +195,9 @@ body {
     color: var(--txt);
     padding-left: 30px;
     text-decoration: none;
+    opacity: 0.5;
 }
 
 .sidebar-content a:hover {
-    color: lightblue;
+    opacity: 1;
 }
