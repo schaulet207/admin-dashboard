@@ -60,6 +60,7 @@ body {
 
 .header-row a:hover{
     opacity: 1;
+    color: rgb(161, 114, 247)
 }
 
 .links {
@@ -85,6 +86,10 @@ body {
     background: none;
     cursor: pointer;
     border: none;
+}
+
+.navigation button:hover {
+    opacity: 1;
 }
 
 .sidebar {
@@ -152,40 +157,83 @@ body {
     padding: 10px;
 }
 
+.avatar:hover {
+    cursor: pointer;
+}
+
 #dashboard {
     background-image: url(img/Speed.svg);
 }
 
+#dashboard:hover {
+    background-image: url(img/Speed2.svg);
+}
+
 #home {
+
     background-image: url(img/Home.svg);
 }
 
+#home:hover {
+    background-image: url(img/Home2.svg);
+}
+
+
 #profile {
     background-image: url(img/Person.svg);
+}
+
+#profile:hover {
+    background-image: url(img/Person2.svg);
 }
 
 #messages {
     background-image: url(img/Chat.svg);
 }
 
+#messages:hover {
+    background-image: url(img/Chat2.svg);
+}
+
 #tasks {
     background-image: url(img/Task.svg);
+}
+
+#tasks:hover {
+    background-image: url(img/Task2.svg);
 }
 
 #communities {
     background-image: url(img/Groups.svg);
 }
 
+#communities:hover {
+    background-image: url(img/Groups2.svg);
+}
+
 #settings {
     background-image: url(img/Settings.svg);
 }
+
+#settings:hover {
+    background-image: url(img/Settings2.svg);
+}
+
 
 #support {
     background-image: url(img/Support_agent.svg);
 }
 
+#support:hover {
+    background-image: url(img/Support_agent2.svg);
+}
+
 #privacy {
     background-image: url(img/Lock.svg);
+}
+
+#privacy:hover {
+    background-image: url(img/Lock2.svg);
 }
 
 .sidebar-content a {
@@ -200,4 +248,73 @@ body {
 
 .sidebar-content a:hover {
     opacity: 1;
+    color: rgb(161, 114, 247)
 }
+
+/* Search Bar */
+.search {
+    width: 100%;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-family: 'Quicksand', sans-serif;
+    background: rgb(61, 61, 64);
+  }
+  
+  .searchTerm:focus{
+    color: rgb(117, 117, 117);
+    background-color: black;
+    font-family: 'Quicksand', sans-serif;
+    border: 2px solid rgb(161, 114, 247);
+    transition-duration: .3s;
+  } 
+
+   .searchTerm:focus + .searchButton {
+    transition-duration: .3s;
+    height: 34px;
+  }
+
+input {
+    color: rgb(117, 117, 117);
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .searchTerm:hover:not(:focus) {
+    border: 1px solid rgb(88, 88, 90);
+    transition-duration: .3s;
+  }
+
+  .searchTerm:hover:not(:focus) + .searchButton {
+    height: 32px;
+    transition-duration: .3s;
+  }
+
+  .searchButton {
+    width: 40px;
+    height: 30px;
+    /* border: 1px solid #00B4CC; */
+    background: rgb(42, 42, 45);
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    background-image: url(img/Search.svg);
+    background-size: 33px;
+    background-position: 2px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+    .wrap{
+    width: 30%;
+    top: 50%;
+    left: 50%;
+  }

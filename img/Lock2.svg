@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="40"
+   width="40"
+   version="1.1"
+   id="svg6423"
+   sodipodi:docname="Lock.svg"
+   inkscape:export-filename="Lock.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6427" />
+  <sodipodi:namedview
+     id="namedview6425"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="5.9"
+     inkscape:cx="-14.40678"
+     inkscape:cy="21.016949"
+     inkscape:window-width="1821"
+     inkscape:window-height="922"
+     inkscape:window-x="0"
+     inkscape:window-y="74"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg6423" />
+  <path
+     d="m 9.458,36.667 q -1.166,0 -1.979,-0.813 Q 6.667,35.042 6.667,33.875 V 16.292 q 0,-1.167 0.812,-1.98 Q 8.292,13.5 9.458,13.5 h 2.5 V 9.708 q 0,-3.333 2.354,-5.687 2.355,-2.354 5.688,-2.354 3.333,0 5.688,2.354 2.354,2.354 2.354,5.687 V 13.5 h 2.5 q 1.166,0 1.979,0.812 0.812,0.813 0.812,1.98 v 17.583 q 0,1.167 -0.812,1.979 -0.813,0.813 -1.979,0.813 z M 20,28.333 q 1.333,0 2.292,-0.937 0.958,-0.938 0.958,-2.271 0,-1.292 -0.958,-2.292 -0.959,-1 -2.292,-1 -1.333,0 -2.292,1 -0.958,1 -0.958,2.334 0,1.291 0.958,2.229 0.959,0.937 2.292,0.937 z M 14.708,13.5 H 25.292 V 9.708 Q 25.292,7.542 23.75,6 22.208,4.458 20,4.458 17.792,4.458 16.25,6 14.708,7.542 14.708,9.708 Z"
+     id="path6421"
+     style="fill:#a172f7;fill-opacity:1" />
+</svg>
