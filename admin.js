@@ -36,8 +36,8 @@ draw(162, 280, 55, 0, 10);
 // Julia Fractal
 var creal = -.8
 var cimag = .156;
-var canvas = document.getElementById('myCanvas');
-var context = canvas.getContext('2d');
+var jcanvas = document.getElementById('myCanvas');
+var context = jcanvas.getContext('2d');
 var frame = 0;
  
 var pallette=[]; //an array that stores the RGB combinations
@@ -264,3 +264,5 @@ particlesJS("particles-js", {
     requestAnimationFrame(update);
   };
   requestAnimationFrame(update);
+
+// Bubbles
