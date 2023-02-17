@@ -146,6 +146,11 @@ div {
     grid-auto-rows: max-content;
 }
 
+#mainlayout {
+    gap: 15px;
+    padding-left: 40px;
+}
+
 .info {
     display: grid;
     gap: 10px;
@@ -347,7 +352,7 @@ input {
 .project-title {
     display: grid;
     grid-column: 1 / -1;
-    padding-left: 40px;
+    padding-left: 25px;
     padding-bottom: 30px;
     padding-top: 30px;
     height: 80px;
@@ -355,6 +360,8 @@ input {
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 700;
+    justify-items: start;
+    align-items: end;
 }
 
 .card {
@@ -595,6 +602,7 @@ input {
 	height: 400px;
 	text-align: center;
 	cursor: pointer;
+    border-radius: 2%;
 }
 
 .grid2 figure:hover {
@@ -755,3 +763,56 @@ figure.effect-zoe:hover figcaption > span:nth-child(2) {
 	-webkit-transition-delay: 0.2s;
 	transition-delay: 0.2s;
 }
+
+.bottom-border {
+    color: white;
+}
+
+/* Particles */
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #b61924;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+  }
+  
+  /* ---- stats.js ---- */
+  
+  .count-particles{
+	background: #000022;
+	position: absolute;
+	top: 48px;
+	left: 0;
+	width: 80px;
+	color: #13E8E9;
+	font-size: .8em;
+	text-align: left;
+	text-indent: 4px;
+	line-height: 14px;
+	padding-bottom: 2px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+  }
+  
+  .js-count-particles{
+	font-size: 1.1em;
+  }
+  
+  #stats,
+  .count-particles{
+	-webkit-user-select: none;
+  }
+  
+  #stats{
+	border-radius: 3px 3px 0 0;
+	overflow: hidden;
+  }
+  
+  .count-particles{
+	border-radius: 0 0 3px 3px;
+  }
