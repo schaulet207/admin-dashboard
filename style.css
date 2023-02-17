@@ -828,72 +828,193 @@ figure.effect-zoe:hover figcaption > span:nth-child(2) {
   
 
 /* Mitosis */
-  .box{
-    -webkit-filter: contrast(6);
-    background-color: orange;
-    width: 100%;
-    height: 100%;
-  }
-  .circle{
-    width: 100px;
-    height: 100px;
-    border-radius:50%;
-    position: absolute;
-    -webkit-filter: blur(20px);
-    background-color: rgb(138,43,226);
-  }
-  .circle_1{
-    top: 50%;
-    left: 45%;
-    -webkit-animation: circle_1_moving 5s infinite;
-  }
-  .circle_2{
-    top: 50%;
-    left: 40%;
-    -webkit-animation: circle_2_moving 5s infinite;
-  }
-  .circle_3{
-    top: 40%;
-    left: 50%;
-    -webkit-animation: circle_3_moving 5s infinite;
-  }
-  .circle_4{
-    top: 40%;
-    left: 50%;
-    -webkit-animation: circle_4_moving 5s infinite;
-  }
-  @-webkit-keyframes circle_1_moving{
-    50%{
-      top: 40%;
-      left: 40%;
-    }
-  }
-  @-webkit-keyframes circle_2_moving{
-    30%{
-      top: 40%;
-      left: 40%;
-    }
-  }
-  @-webkit-keyframes circle_3_moving{
-    80%{
-      top: 40%;
-      left: 40%;
-    }
-  }
-  @-webkit-keyframes circle_4_moving{
-    25%{
-      top: 40%;
-      left: 40%;
-    }
-    50%{
-      top: 35%;
-      left: 35%;
-    }
-    75%{
-      top: 45%;
-      left: 45%;
-    }
-  }
+.content {
+  zoom: 0.15;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+overflow: auto;
+position: absolute;
+background: radial-gradient(rgb(59 10 225), #000000);
+}
+
+.cellule {
+  border-radius: 70% 50% 65% 50%;
+  box-shadow: 0 20px 30px rgb(0 0 0 / 20%), inset 0px 10px 30px 5px #2e47f8;
+  height: 48vmin;
+  position: absolute;
+  width: 48vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cellule:after {
+  border-radius: 70% 50% 65% 50%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 70%);
+  box-shadow: inset 0 20px 30px rgb(255 255 255 / 15%);
+  content: "";
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+opacity: 0.35;
+}
+
+.core {
+  border-radius: 50% 65% 50% 70%;
+  box-shadow: 0 20px 30px rgb(0 0 0 / 20%), inset 0px 10px 30px 5px rgb(0 23 148), 0 0 25px -5px #10a2fd;
+  height: 16vmin;
+  width: 16vmin;
+  position: absolute;
+  background: radial-gradient(#1e76fa, #03c9fe);
+  border: 1px solid #2071fa;
+animation: spincore1 20s 0s linear infinite;
+}
+
+.cellule:nth-child(1) {
+animation: mitosis1 6s 0s 1, moving1 5s 6s ease-in-out infinite alternate;
+transform: translate(-22vmin, -22vmin) rotate(199deg);
+}
+.cellule:nth-child(2) {
+animation: mitosis2 6.2s 0s 1, moving2 4.5s 6s ease-in-out infinite alternate;
+transform: translate(22vmin, 22vmin) rotate(50deg)
+}
+.cellule:nth-child(3) {
+animation: mitosis3 6s 0s 1, moving3 6s 6s ease-in-out infinite alternate;
+transform: translate(-22vmin, 22vmin) rotate(270deg)
+}
+.cellule:nth-child(4) {
+animation: mitosis4 6.2s 0s 1, moving4 5.5s 6s ease-in-out infinite alternate;
+transform: translate(22vmin, -22vmin) rotate(-150deg)
+}
+.cellule:nth-child(5) {
+animation: mitosis5 9.2s 0s 1, moving5 4.5s 9s ease-in-out infinite alternate;
+transform: translate(70vmin, -22vmin) rotate(-180deg);
+}
+.cellule:nth-child(6) {
+animation: mitosis6 9.3s 0s 1, moving6 5s 9s ease-in-out infinite alternate;
+transform: transform: translate(22vmin, 22vmin) rotate(50deg);
+}
+.cellule:nth-child(7) {
+animation: mitosis7 9.25s 0s 1, moving7 4.5s 9s ease-in-out infinite alternate;
+transform: translate(-70vmin, -22vmin) rotate(225deg);
+}
+.cellule:nth-child(8) {
+animation: mitosis8 9.15s 0s 1, moving8 5s 9s ease-in-out infinite alternate;
+transform: translate(-70vmin, 22vmin) rotate(299deg);
+}
+
+.cellule:nth-child(odd) .core {
+animation: spincore2 22s 0s linear infinite;
+}
+
+/*** KEYFRAMES ***/
+@keyframes mitosis1 {
+     0% { transform: translate(0, 0); }
+16.666% { transform: translate(0, 0); filter:blur(0px); }
+33.333% { filter:blur(2px); }
+    50% { transform: translate(-22vmin, -1vmin) rotate(115deg); filter:blur(0px); }
+66.666% { transform: translate(-22vmin, -1vmin) rotate(110deg); filter:blur(0px); }
+83.333% { filter:blur(1px); }
+   100% { transform: translate(-22vmin, -22vmin) rotate(199deg); filter:blur(0px); }
+}
+@keyframes mitosis2 {
+   0% { transform: translate(0, 0); }
+16.666% { transform: translate(0, 0); filter:blur(0px); }
+33.333% { filter:blur(2px); }
+    50% { transform: translate(22vmin, 1vmin) rotate(-30deg); filter:blur(0px); }
+66.666% { transform: translate(22vmin, 1vmin) rotate(-25deg); filter:blur(0px); }
+83.333% { filter:blur(1px); }
+   100% { transform: translate(22vmin, 22vmin) rotate(50deg); filter:blur(0px); }
+}
+@keyframes mitosis3 {
+   0% { transform: translate(0, 0); opacity:0; }
+16.666% { transform: translate(0, 0); }
+    50% { transform: translate(-22vmin, -1vmin) rotate(115deg); filter:blur(0px); }
+66.666% { transform: translate(-22vmin, -1vmin) rotate(115deg); opacity:1; filter:blur(0px); }
+83.333% { filter:blur(1px); }
+   100% { transform: translate(-22vmin, 22vmin) rotate(270deg); filter:blur(0px); }
+}
+@keyframes mitosis4 {
+   0% { transform: translate(0, 0); opacity:0; }
+16.666% { transform: translate(0, 0); }
+    50% { transform: translate(22vmin, 1vmin) rotate(-30deg); filter:blur(0px); }
+66.666% { transform: translate(22vmin, 1vmin) rotate(-30deg); opacity:1; filter:blur(0px); }
+83.333% { filter:blur(1px); }
+   100% { transform: translate(22vmin, -22vmin) rotate(-150deg); filter:blur(0px); }
+}
+@keyframes mitosis5 {
+     0% { transform: translate(22vmin, -22vmin) rotate(-150deg); opacity:0; }
+  68% { transform: translate(22vmin, -22vmin) rotate(-150deg); opacity:0; filter:blur(0px); }
+  69% { filter:blur(1px); opacity: 1; }
+   100% { transform: translate(70vmin, -22vmin) rotate(-180deg); opacity:1; filter:blur(0px); }
+}
+@keyframes mitosis6 {
+     0% { transform: translate(22vmin, 22vmin) rotate(50deg); opacity:0; }
+    69% { transform: translate(22vmin, 22vmin) rotate(50deg); opacity:0; filter:blur(0px); }
+    70% { filter:blur(1px); opacity: 1; }
+   100% { transform: translate(70vmin, 22vmin) rotate(80deg); opacity:1; filter:blur(0px); }
+}
+@keyframes mitosis7 {
+     0% { transform: translate(-22vmin, -22vmin) rotate(199deg); opacity:0; }
+  69.5% { transform: translate(-22vmin, -22vmin) rotate(199deg); opacity:0; filter:blur(0px); }
+    71% { filter:blur(1px); opacity: 1; }
+   100% { transform: translate(-70vmin, -22vmin) rotate(225deg); opacity:1; filter:blur(0px); }
+}
+@keyframes mitosis8 {
+     0% { transform: translate(-22vmin, 22vmin) rotate(270deg); opacity:0; }
+  68.5% { transform: translate(-22vmin, 22vmin) rotate(270deg); opacity:0; filter:blur(0px); }
+    70% { filter:blur(1px); opacity: 1; }
+   100% { transform: translate(-70vmin, 22vmin) rotate(299deg); opacity:1; filter:blur(0px); }
+}
+
+@keyframes moving1 {
+  0% { transform: translate(-22vmin, -22vmin) rotate(199deg); }
+100% { transform: translate(-22vmin, -22vmin) rotate(165deg); }
+}
+@keyframes moving2 {
+  0% { transform: translate(22vmin, 22vmin) rotate(50deg); }
+100% { transform: translate(22vmin, 22vmin) rotate(75deg); }
+}
+@keyframes moving3 {
+  0% { transform: translate(-22vmin, 22vmin) rotate(270deg); }
+100% { transform: translate(-22vmin, 22vmin) rotate(240deg); }
+}
+@keyframes moving4 {
+  0% { transform: translate(22vmin, -22vmin) rotate(-150deg); }
+100% { transform: translate(22vmin, -22vmin) rotate(-130deg); }
+}
+@keyframes moving5 {
+  0% { transform: translate(70vmin, -22vmin) rotate(-180deg); }
+100% { transform: translate(70vmin, -22vmin) rotate(-155deg); }
+}
+@keyframes moving6 {
+  0% { transform: translate(70vmin, 22vmin) rotate(80deg); }
+100% { transform: translate(70vmin, 22vmin) rotate(55deg); }
+}
+@keyframes moving7 {
+  0% { transform: translate(-70vmin, -22vmin) rotate(225deg); }
+100% { transform: translate(-70vmin, -22vmin) rotate(199deg); }
+}
+@keyframes moving8 {
+  0% { transform: translate(-70vmin, 22vmin) rotate(299deg); }
+100% { transform: translate(-70vmin, 22vmin) rotate(325deg); }
+}
+
+@keyframes spincore1 {
+  0% { transform: rotate(0deg); }
+ 50% { border-radius:  70% 50% 65% 50%; }
+100% { transform: rotate(-360deg); }
+}
+@keyframes spincore2 {
+  0% { transform: rotate(0deg); }
+ 50% { border-radius: 65% 50% 70% 50%; }
+100% { transform: rotate(360deg); }
+}
 
 /* Waves */
 
